@@ -1,5 +1,5 @@
 # Data Analyst
-Technical Skills: </br>
+Technical Skills:  
 • Programming: Python: pandas, NumPy, Matplotlib, Seaborn, Sci-kit learn, Spacy, TensorFlow.  
 • Advanced Excel: Formulas, Power Query, Pivot Tables, VBA macros   
 • SQL: Commands, Joins, CTE, Stored procedures, User-defined functions, views.  
