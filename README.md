@@ -1,5 +1,5 @@
 # Data Analyst
-Technical Skills:
+Technical Skills: </br>
 • Programming: Python: pandas, NumPy, Matplotlib, Seaborn, Sci-kit learn, Spacy, TensorFlow.  
 • Advanced Excel: Formulas, Power Query, Pivot Tables, VBA macros   
 • SQL: Commands, Joins, CTE, Stored procedures, User-defined functions, views.  
@@ -12,7 +12,7 @@ Technical Skills:
 • Working on ML, Cloud-based collection tool(SPECTRA) 
 ## Education
 ### UNIVERSITY OF HYDERABAD, Hyderabad, Telangana Jun 2023
-#### • Master of Business Administration: Major - Business Analytics; Minor - Finance GPA:7.8 
+#### • **Master of Business Administration:** Business Analytics(major); Finance(minor) GPA:7.8 
 **Relevant Coursework:** Statistics for Business Analytics; BA for Decision Making; Predictive Analytics, Financial Reporting and analysis, Operations management, supply chain management, procurement management.
 
 ### SATAVAHANA UNIVERISTY, Karimnagar, Telangana Oct 2020
