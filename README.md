@@ -12,11 +12,11 @@ Technical Skills:
 • Working on ML, Cloud-based collection tool(SPECTRA) 
 ## Education
 ### UNIVERSITY OF HYDERABAD, Hyderabad, Telangana Jun 2023
-#### • Master of Business Administration:** Major: Business Analytics; Minor: Finance GPA:7.8 
-** Relevant Coursework:** Statistics for Business Analytics; BA for Decision Making; Predictive Analytics, Financial Reporting and analysis, Operations management, supply chain management, procurement management.
+#### • Master of Business Administration: Major - Business Analytics; Minor - Finance GPA:7.8 
+**Relevant Coursework:** Statistics for Business Analytics; BA for Decision Making; Predictive Analytics, Financial Reporting and analysis, Operations management, supply chain management, procurement management.
 
 ### SATAVAHANA UNIVERISTY, Karimnagar, Telangana Oct 2020
-#### • ** Bachelor of Science:** Major in Mathematics; Minors in Physics and Chemistry GPA:9.32
+#### • **Bachelor of Science:** Major in Mathematics; Minors in Physics and Chemistry GPA:9.32
 
 ## Projects
 ### CUSTOMER CHURN PREDICTION IN A BANK USING ANN [link](https://github.com/rajesh-1918/projects/tree/main/cust_churn_prediction_in_bank_using_ANN)
