@@ -75,6 +75,26 @@
             $(this).css("width", $(this).attr("aria-valuenow") + '%');
         });
     }, {offset: '80%'});
+    
+    // Ensure cloud items are hidden initially
+    $(document).ready(function () {
+        $('.skill-item[data-category="cloud"]').hide();
+    });
+
+    // Skill Filters
+    $('.filter-btn').on('click', function () {
+        var filter = $(this).data('filter');
+        if (filter === 'all') {
+            $('.skill-item').not('[data-category="cloud"]').show();
+        } else {
+            $('.skill-item').hide();
+            $('.skill-item[data-category="' + filter + '"]').show();
+        }
+        $('.filter-btn').removeClass('btn-primary').addClass('btn-secondary');
+        $(this).removeClass('btn-secondary').addClass('btn-primary');
+    });
+
+
 
 
     // Portfolio isotope and filter
@@ -114,4 +134,3 @@
     });
     
 })(jQuery);
-
