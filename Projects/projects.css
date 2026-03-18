@@ -1,0 +1,271 @@
+/* =============================
+   PROJECTS SECTION
+============================= */
+.projects {
+  padding: 100px 20px; /* Standardized padding */
+  text-align: center;
+  background: #121212; /* Updated background to match other sections */
+  color: #fff;
+}
+
+.projects h2 {
+  color: #ff6b6b;
+  font-size: 36px; /* Adjusted font size to match other sections */
+  margin-bottom: 40px; /* Standardized margin */
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase; /* Consistent text style */
+}
+
+/* =============================
+   PROJECT CARD DESIGN
+============================= */
+.project-card {
+  background: rgba(255, 255, 255, 0.08); /* Adjusted background for better contrast */
+  border-radius: 15px; /* Slightly reduced border radius */
+  margin: 20px auto; /* Standardized margin */
+  max-width: 800px; /* Adjusted width for consistency */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Softer shadow */
+  transition: transform 0.3s ease, background 0.3s ease;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Adjusted border for better visibility */
+}
+
+.project-card:hover {
+  transform: translateY(-8px) scale(1.03); /* Slightly reduced hover effect */
+  background: rgba(255, 255, 255, 0.15); /* Enhanced hover background */
+  box-shadow: 0 10px 25px rgba(255, 77, 77, 0.25); /* Softer hover shadow */
+}
+
+/* =============================
+   HEADER
+============================= */
+.project-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  cursor: pointer;
+  background: linear-gradient(135deg, rgba(255, 77, 77, 0.1), rgba(255, 255, 255, 0.02));
+}
+
+.project-header img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-right: 20px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.project-info {
+  flex: 1;
+  text-align: left;
+}
+
+.project-info h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+  color: #ff6b6b;
+  font-weight: 700;
+}
+
+.project-info p {
+  color: #ddd;
+  font-size: 16px;
+}
+
+/* =============================
+   TOGGLE ICON
+============================= */
+.toggle-icon {
+  transition: transform 0.3s ease;
+  color: #ff4d4d;
+  font-size: 20px;
+}
+
+.project-card.active .toggle-icon {
+  transform: rotate(180deg);
+}
+
+/* =============================
+   DETAILS SECTION
+============================= */
+.project-details {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding: 0 25px;
+  transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.4s ease;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.02);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-card.active .project-details {
+  max-height: 600px;
+  opacity: 1;
+  padding: 15px 25px 25px;
+}
+
+.project-details p {
+  color: #ccc;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.project-details a {
+  color: #ff6b6b;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.project-details a:hover {
+  text-decoration: underline;
+}
+
+/* =============================
+   ANIMATIONS
+============================= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+  transition: 0.3s ease;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: -100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    transition: left 0.3s ease;
+    padding: 20px 0;
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
+
+
+/* =============================
+   RESPONSIVE DESIGN
+============================= */
+@media (max-width: 768px) {
+  .cert-header {
+    flex-direction: column;        /* Stack vertically */
+    align-items: center;           /* Center everything */
+    text-align: center;            /* Center text */
+  }
+
+  .cert-header img {
+    margin-bottom: 10px;
+  }
+
+  .cert-info {
+    text-align: center;            /* Keep text centered under image */
+    margin-bottom: 8px;
+  }
+
+  .toggle-icon {
+    margin-top: 5px;
+    color: #ff4d4d;                /* Optional: make it red on mobile for clarity */
+  }
+}
+
+/* ===== PROJECT CARD GLOW + BREATHING EFFECT ===== */
+.project-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+  margin: 25px auto;
+  max-width: 850px;
+  box-shadow: 0 0 15px rgba(255, 77, 77, 0.15);
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+  animation: fadeInUp 0.8s ease-in-out;
+  cursor: pointer;
+}
+
+/* 🔥 Hover: Neon Glow + Zoom + Breathing Pulse (Same as All Other Sections) */
+.project-card:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.12);
+  animation: glowPulse 1.5s infinite alternate;
+  box-shadow:
+    0 0 20px rgba(255, 77, 77, 0.6),
+    0 0 40px rgba(255, 0, 0, 0.3),
+    0 0 60px rgba(255, 0, 0, 0.2);
+}
+
+/* 🧊 Clean Unhover (no lingering glow/flicker) */
+.project-card:active,
+.project-card:focus,
+.project-card {
+  animation: none;
+}
+
+/* ✨ Shared Red Neon Breathing Animation */
+@keyframes glowPulse {
+  from {
+    box-shadow:
+      0 0 20px rgba(255, 77, 77, 0.6),
+      0 0 40px rgba(255, 0, 0, 0.3);
+  }
+  to {
+    box-shadow:
+      0 0 40px rgba(255, 77, 77, 0.9),
+      0 0 80px rgba(255, 0, 0, 0.6);
+  }
+}

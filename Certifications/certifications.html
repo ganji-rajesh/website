@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certifications</title>
+  <link rel="stylesheet" href="../styles.css">
+
+  <link rel="stylesheet" href="certifications.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+  <!-- Header Placeholder - Loaded by script.js -->
+  <header></header>
+
+  <!-- Certifications Section -->
+  <section class="certifications">
+    <div class="container">
+      <h2>Certifications</h2>
+
+      <div class="cert-card">
+        <div class="cert-header">
+          <div class="cert-info">
+            <h3>Introductory Course in French</h3>
+            <p><strong>Institution:</strong> University of Hyderabad</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-header">
+          <div class="cert-info">
+            <h3>Data Analysis with Python</h3>
+            <p><strong>Institution:</strong> Coursera</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-header">
+          <div class="cert-info">
+            <h3>Essential Design Principles for Tableau</h3>
+            <p><strong>Institution:</strong> Coursera</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-header">
+          <div class="cert-info">
+            <h3>Excel Basics for Data Analysis</h3>
+            <p><strong>Institution:</strong> Coursera</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Footer Placeholder - Loaded by script.js -->
+  <footer></footer>
+
+  <script src="certification.js"></script>
+  <script src="../script.js"></script>
+
+  <script>
+// Card expand/collapse functionality - specific to certification page
+document.addEventListener("DOMContentLoaded", () => {
+  // ===== EXPAND / COLLAPSE CARDS =====
+  const allCards = document.querySelectorAll(".cert-card, .project-card");
+
+  allCards.forEach(card => {
+    const header = card.querySelector(".cert-header, .project-header");
+    if (header) {
+      header.addEventListener("click", () => {
+        // Close other cards
+        allCards.forEach(other => {
+          if (other !== card) other.classList.remove("active");
+        });
+
+        // Toggle the clicked one
+        card.classList.toggle("active");
+      });
+    }
+  });
+});
+</script>
+
+</body>
+
+</html>
