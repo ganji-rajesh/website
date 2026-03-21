@@ -2,15 +2,7 @@
 
 // ===== DETERMINE CORRECT PATHS BASED ON CURRENT LOCATION =====
 function getComponentPath(componentFileName) {
-    const currentPath = window.location.pathname;
-    const depth = (currentPath.match(/\//g) || []).length - 1; // Count slashes to determine depth
-    let basePath = '';
-
-    for (let i = 0; i < depth; i++) {
-        basePath += '../';
-    }
-
-    return basePath + componentFileName;
+    return '/website/' + componentFileName;
 }
 
 // ===== LOAD AND INJECT HEADER =====
@@ -111,7 +103,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Fetch Live LeetCode Stats
 async function loadLeetCodeStats() {
-    const container = document.getElementById("leetcode-stats");
+    const container = document.getElementById("leetcode-stats")
+    if (!container) return;
     try {
         const response = await fetch("https://leetcode-stats-api.herokuapp.com/Ruchith1018j");
         const data = await response.json();
@@ -141,18 +134,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.querySelector(".hamburger");
   const navLinks = document.querySelector(".nav-links");
 
-  // Toggle menu when hamburger is clicked
-  hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    navLinks.classList.toggle("active");
-  });
-
-  // Close the menu when any link is clicked (better mobile UX)
-  document.querySelectorAll(".nav-links a").forEach(link => {
-    link.addEventListener("click", () => {
-      hamburger.classList.remove("active");
-      navLinks.classList.remove("active");
+  if (hamburger && navLinks) {   // ✅ null check added
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      navLinks.classList.toggle("active");
     });
-  });
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        hamburger.classList.remove("active");
+        navLinks.classList.remove("active");
+      });
+    });
+  }
 });
 
